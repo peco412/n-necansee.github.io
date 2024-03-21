@@ -671,7 +671,10 @@ header{
 
  @media screen and (max-width: 678px) {
     .carousel .list .item .content{
-        padding-right: 0;
+        width: 1140px;
+        max-width: 80%;
+        left: 50%;
+        padding-right: 0%;
     }
     .carousel .list .item .content .author,
     .carousel .list .item .content .title,
