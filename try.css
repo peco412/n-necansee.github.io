@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Darker Grotesque", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+.pdk{
+    margin:70px;
+}
+
+.pdk-ctn{
+    display: flex;
+    gap: 20px;
+    justify-content: center; /* Canh giữa theo chiều ngang */
+    align-items: center;
+}
+
+.pdk-box{
+    height: 90px;
+    width: 90px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ccc;
+    border: 1px solid #203c58;
+    cursor: pointer;
+}
+
+.pdk-box img{
+    height: 70px;
+    max-width: 100%;
+}
+
+.pdk-show{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 10px;
+    display: none;
+ }
+
+ .pdk-img{
+    justify-self: right;
+ }
+
+.pdk-img img{
+    width: 700px;
+    object-fit: contain;
+}
+
+.pdk-txt h1{
+    font-size: 46px;
+    font-weight: bold;
+    color: goldenrod;
+    line-height: 1.1;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.pdk-txt p{
+    width: 100%;
+    max-width: 500px;
+    font-size: 16px;
+    line-height: 30px;
+    margin-bottom: 20px;
+}
+
+.pdk-txt h5{
+    font-size: 37px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 35px;
+}
+
+.pdk-btn .btn{
+    display: inline-block;
+    padding: 15px 20px;
+    color: goldenrod;
+    background: #203c58;
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 10px;
+    margin-right: 20px;
+    transition: all .5s ease;
+}
+
+.pdk-btn .btn:hover{
+    background: goldenrod;
+    color: #203c58;
+}
+
+.pdk-btn .btn2{
+    display: inline-block;
+    color: #203c58;
+    font-size: 20px;
+    font-weight: 700;
+    border-bottom: 2px solid #203c58;
+    transition: all .5s ease;
+}
+
+.pdk-btn .btn2:hover{
+    color: goldenrod;
+    transform: scale(1.1) translateY(-6px);
+    border-bottom: 2px solid goldenrod;
+}
+

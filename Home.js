@@ -75,3 +75,21 @@ window.addEventListener('scroll', function () {
         logoName.style.display = 'none';
     }
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    showContent(1);
+});
+
+function showContent(index) {
+    // Lấy ra phần tử pdk-show tương ứng với pdk-box được nhấp vào
+    var content = document.getElementById("content" + index);
+    // Hiển thị phần tử pdk-show tương ứng
+    content.style.display = 'grid'; // Thay đổi hiển thị thành grid
+    // Ẩn các phần tử pdk-show khác
+    var allContent = document.querySelectorAll('.pdk-show');
+    allContent.forEach(function(item) {
+        if (item.id !== "content" + index) {
+            item.style.display = 'none';
+        }
+    });
+}

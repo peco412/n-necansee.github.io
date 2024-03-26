@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="try.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anta&family=Darker+Grotesque:wght@300..900&family=Honk&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="pdk">
+            <div class="pdk-ctn">
+                <div class="pdk-box" onclick="showContent(1)">
+                    <img src="imgraf/may1.png" alt="">
+                </div>
+                <div class="pdk-box" onclick="showContent(2)">
+                    <img src="imgraf/may6.png" alt="">
+                </div>
+                <div class="pdk-box" onclick="showContent(3)">
+                    <img src="imgraf/may2.png" alt="">
+                </div>
+            </div>
+
+            <div class="pdk-show" id="content1">
+                <div class="pdk-img">
+                    <img src="imgraf/may1.png" alt="">
+                </div>
+                <div class="pdk-txt">
+                    <h1>FRESH100 <br> SMART VENDING MACHINE</h1>
+                    <p>Chủ nghĩa duy vật, còn gọi là thuyết duy vật hay duy vật luận (tiếng Anh: Materialism), là một trường phái triết học, một thế giới quan, một hình thức của chủ nghĩa triết học nhất nguyên cho rằng vật chất là chất cơ bản trong tự nhiên, và tất cả mọi thứ, bao gồm cả trạng thái tinh thần và ý thức, là kết quả của sự tương tác vật chất. Theo chủ nghĩa duy vật triết học, tâm trí và ý thức là sản phẩm phụ của các quá trình vật chất (như sinh hóa của não người và hệ thần kinh), mà không có chúng thì tâm trí và ý thức không tồn tại.</p>
+                    <h5>100.000$</h5>
+                    <div class="pdk-btn">
+                        <a href="" class="btn">Brochure</a>
+                        <a href="" class="btn2">View Details</a>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="pdk-show" id="content2">
+                    <div class="pdk-img">
+                        <img src="imgraf/may6.png" alt="">
+                    </div>
+                    <div class="pdk-txt">
+                        <h1>SGM100 <br> SMART GAS MIXER</h1>
+                        <p>Chủ nghĩa duy vật, còn gọi là thuyết duy vật hay duy vật luận (tiếng Anh: Materialism), là một trường phái triết học, một thế giới quan, một hình thức của chủ nghĩa triết học nhất nguyên cho rằng vật chất là chất cơ bản trong tự nhiên, và tất cả mọi thứ, bao gồm cả trạng thái tinh thần và ý thức, là kết quả của sự tương tác vật chất. Theo chủ nghĩa duy vật triết học, tâm trí và ý thức là sản phẩm phụ của các quá trình vật chất (như sinh hóa của não người và hệ thần kinh), mà không có chúng thì tâm trí và ý thức không tồn tại.</p>
+                        <h5>70.000$</h5>
+                        <div class="pdk-btn">
+                            <a href="" class="btn">Brochure</a>
+                            <a href="" class="btn2">View Details</a>
+                        </div>
+                        </div>
+                    </div>
+
+                    <div class="pdk-show" id="content3">
+                        <div class="pdk-img">
+                            <img src="imgraf/may2.png" alt="">
+                        </div>
+                        <div class="pdk-txt">
+                            <h1>RTV440A <br> 4 TRAY PACKING MACHINE</h1>
+                            <p>Chủ nghĩa duy vật, còn gọi là thuyết duy vật hay duy vật luận (tiếng Anh: Materialism), là một trường phái triết học, một thế giới quan, một hình thức của chủ nghĩa triết học nhất nguyên cho rằng vật chất là chất cơ bản trong tự nhiên, và tất cả mọi thứ, bao gồm cả trạng thái tinh thần và ý thức, là kết quả của sự tương tác vật chất. Theo chủ nghĩa duy vật triết học, tâm trí và ý thức là sản phẩm phụ của các quá trình vật chất (như sinh hóa của não người và hệ thần kinh), mà không có chúng thì tâm trí và ý thức không tồn tại.</p>
+                            <h5>90.000$</h5>
+                            <div class="pdk-btn">
+                                <a href="" class="btn">Brochure</a>
+                                <a href="" class="btn2">View Details</a>
+                            </div>
+                            </div>
+                        </div>
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            showContent(1);
+        });
+        
+        function showContent(index) {
+            // Lấy ra phần tử pdk-show tương ứng với pdk-box được nhấp vào
+            var content = document.getElementById("content" + index);
+            // Hiển thị phần tử pdk-show tương ứng
+            content.style.display = 'grid'; // Thay đổi hiển thị thành grid
+            // Ẩn các phần tử pdk-show khác
+            var allContent = document.querySelectorAll('.pdk-show');
+            allContent.forEach(function(item) {
+                if (item.id !== "content" + index) {
+                    item.style.display = 'none';
+                }
+            });
+        }
+                </script>
+</body>
+</html>
