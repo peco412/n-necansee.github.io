@@ -15,7 +15,7 @@ header{
     top: 0;
     right: 0;
     width: 100%;
-    z-index: 1000;
+    z-index: 10000;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -1258,43 +1258,104 @@ hr{
  }
 
  /* Product page */
+ .pd {
+    overflow: hidden;
+}
+
+.pd-vid {
+    position: relative;
+}
+
+.pd-vid video {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: brightness(30%);
+}
+
+.pd-vid h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: white; /* Màu chữ của tiêu đề */
+    font-size: 72px; /* Cỡ chữ của tiêu đề */
+    /* Các thuộc tính CSS khác tùy chỉnh theo nhu cầu của bạn */
+}
+
  .pdk{
-    background-color: #f8f8f8;
     padding: 8% 15%;
     position: relative;
     height: 120vh;
     width: 100%;
     overflow: hidden;
-    display: grid;
     grid-template-columns: 1fr;
     align-items: center;
+    background-color: cornsilk;
+ }
+
+ .pdk-ctn h1{
+    font-size: 50px;
+    color: #203c58;
+    font-weight: 700;
  }
 
  .pdk-ctn{
+    width: 100%;
     display: flex;
-    gap: 20px;
-    justify-content: center; /* Canh giữa theo chiều ngang */
+    gap: 560px;
+    justify-content: center;
     align-items: center;
+    background-color: cornsilk;
+    margin: 0 auto;
+    padding: 10px;
 }
 
 .pdk-box{
-    height: 150px;
-    width: 150px;
+    height: 100px;
+    width: 100px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background-color: goldenrod;
+    background-color: palegoldenrod;
     color: #203c58;
     cursor: pointer;
+    flex-direction: column;
 }
+
+.pdk-box:nth-child(2){
+    margin: 0 10px 0 10px;
+}
+
 .pdk-box:hover{
     background-color: #203c58;
+}
+
+.pdk-box h1{
+    font-size: 20px;
+    font-weight: bold;
+    color:  #203c58;
+}
+
+.pdk-box h1:hover{
     color: goldenrod;
 }
 
 .pdk-box img{
-    height: 120px;
+    height: 50px;
     max-width: 100%;
+}
+
+.pdk-box.active {
+    border: 2px solid #203c58;
+}
+
+.pdk hr{
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid #203c58;
+    margin: 10px auto;
 }
 
 .pdk-show{
@@ -1302,15 +1363,17 @@ hr{
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     gap: 10px;
+ }      
+ .pdk-show:not(#content1) {
     display: none;
- }
+}
 
  .pdk-img{
     justify-self: right;
  }
 
 .pdk-img img{
-    width: 700px;
+    width: 100%;
     object-fit: contain;
 }
 
@@ -1329,6 +1392,7 @@ hr{
     font-size: 16px;
     line-height: 30px;
     margin-bottom: 20px;
+    color: #000;
 }
 
 .pdk-txt h5{
@@ -1365,6 +1429,308 @@ hr{
 }
 
 .pdk-btn .btn2:hover{
+    color: goldenrod;
+    transform: scale(1.1) translateY(-6px);
+    border-bottom: 2px solid goldenrod;
+}
+
+.mdg {
+    padding: 8% 15%;
+    position: relative;
+    height: 120vh;
+    width: 100%;
+    overflow: hidden;
+    grid-template-columns: 1fr;
+    align-items: center;
+}
+
+.mdg-ctn h1 {
+    font-size: 50px;
+    color: #203c58;
+    font-weight: 700;
+}
+
+.mdg-ctn{
+    width: 100%;
+    display: flex;
+    gap: 560px;
+    justify-content: center;
+    align-items: center;
+    background-color: cornsilk;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.mdg-box{
+    height: 100px;
+    width: 100px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: palegoldenrod;
+    color: #203c58;
+    cursor: pointer;
+    flex-direction: column;
+}
+
+.mdg-box:nth-child(2){
+    margin: 0 10px 0 10px;
+}
+
+.mdg-box:hover {
+    background-color: #203c58;
+}
+
+.mdg-box h1 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #203c58;
+}
+
+.mdg-box h1:hover {
+    color: goldenrod;
+}
+
+.mdg-box img {
+    height: 50px;
+    max-width: 100%;
+}
+
+.mdg-box.active {
+    border: 2px solid #203c58;
+}
+
+.mdg hr {
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid #203c58;
+    margin: 10px auto;
+}
+
+.mdg-show {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 10px;
+}
+
+.mdg-show:not(#contentt1) {
+    display: none;
+}
+
+.mdg-img {
+    justify-self: right;
+}
+
+.mdg-img img {
+    width: 100%;
+    object-fit: contain;
+}
+
+.mdg-txt h1 {
+    font-size: 46px;
+    font-weight: bold;
+    color: goldenrod;
+    line-height: 1.1;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.mdg-txt p {
+    width: 100%;
+    max-width: 500px;
+    font-size: 16px;
+    line-height: 30px;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.mdg-txt h5 {
+    font-size: 37px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 35px;
+}
+
+.mdg-btn .btn {
+    display: inline-block;
+    padding: 15px 20px;
+    color: goldenrod;
+    background: #203c58;
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 10px;
+    margin-right: 20px;
+    transition: all .5s ease;
+}
+
+.mdg-btn .btn:hover {
+    background: goldenrod;
+    color: #203c58;
+}
+
+.mdg-btn .btn2 {
+    display: inline-block;
+    color: #203c58;
+    font-size: 20px;
+    font-weight: 700;
+    border-bottom: 2px solid #203c58;
+    transition: all .5s ease;
+}
+
+.mdg-btn .btn2:hover {
+    color: goldenrod;
+    transform: scale(1.1) translateY(-6px);
+    border-bottom: 2px solid goldenrod;
+}
+
+
+.kbb {
+    padding: 8% 15%;
+    position: relative;
+    height: 120vh;
+    width: 100%;
+    overflow: hidden;
+    grid-template-columns: 1fr;
+    align-items: center;
+    background-color: cornsilk;
+}
+
+.kbb-ctn h1 {
+    font-size: 50px;
+    color: #203c58;
+    font-weight: 700;
+}
+
+.kbb-ctn{
+    width: 100%;
+    display: flex;
+    gap: 560px;
+    justify-content: center;
+    align-items: center;
+    background-color: cornsilk;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.kbb-box{
+    height: 100px;
+    width: 100px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: palegoldenrod;
+    color: #203c58;
+    cursor: pointer;
+    flex-direction: column;
+}
+
+.kbb-box:nth-child(2){
+    margin: 0 10px 0 10px;
+}
+
+.kbb-box:hover {
+    background-color: #203c58;
+}
+
+.kbb-box h1 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #203c58;
+}
+
+.kbb-box h1:hover {
+    color: goldenrod;
+}
+
+.kbb-box img {
+    height: 50px;
+    max-width: 100%;
+}
+
+.kbb-box.active {
+    border: 2px solid #203c58;
+}
+
+.kbb hr {
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid #203c58;
+    margin: 10px auto;
+}
+
+.kbb-show {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 10px;
+}
+
+.kbb-show:not(#contenttt1) {
+    display: none;
+}
+
+.kbb-img {
+    justify-self: right;
+}
+
+.kbb-img img {
+    width: 100%;
+    object-fit: contain;
+}
+
+.kbb-txt h1 {
+    font-size: 46px;
+    font-weight: bold;
+    color: goldenrod;
+    line-height: 1.1;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.kbb-txt p {
+    width: 100%;
+    max-width: 500px;
+    font-size: 16px;
+    line-height: 30px;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.kbb-txt h5 {
+    font-size: 37px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 35px;
+}
+
+.kbb-btn .btn {
+    display: inline-block;
+    padding: 15px 20px;
+    color: goldenrod;
+    background: #203c58;
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 10px;
+    margin-right: 20px;
+    transition: all .5s ease;
+}
+
+.kbb-btn .btn:hover {
+    background: goldenrod;
+    color: #203c58;
+}
+
+.kbb-btn .btn2 {
+    display: inline-block;
+    color: #203c58;
+    font-size: 20px;
+    font-weight: 700;
+    border-bottom: 2px solid #203c58;
+    transition: all .5s ease;
+}
+
+.kbb-btn .btn2:hover {
     color: goldenrod;
     transform: scale(1.1) translateY(-6px);
     border-bottom: 2px solid goldenrod;
